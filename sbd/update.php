@@ -1,7 +1,7 @@
 <?php
     include "conn.php";
-    $id = $_GET['id'];
-    $qe = mysqli_query($conn, "SELECT * FROM Register WHERE id='$id'");
+    $id = $_GET['username'];
+    $qe = mysqli_query($conn, "SELECT * FROM pasien WHERE username='$id'");
     $row = mysqli_fetch_array($qe);
 ?>
 <!DOCTYPE html>
@@ -21,10 +21,10 @@
 
             <div class="nav">
                 <a class="a" href="logout.php">LOGOUT</a>
-                <a class="b" href="#">REGISTER</a>
+                <a class="b" href="user.php">JADWAL VAKSIN</a>
                 <a class="c" href="home.php">HOME</a>
-                <a class="d" href="about.php">ABOUT AJK</a>
-                <a class="e" href="user.php">USER</a>
+                <a class="d" href="rumahsakit.php">REKOMENDASI RS</a>
+                <a class="e active" href="update.php">EDIT PROFILE</a>
             </div>
 
                 <div class="update">

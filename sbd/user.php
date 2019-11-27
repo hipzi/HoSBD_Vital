@@ -16,9 +16,10 @@
 
         <div class="nav">
                 <a class="a" href="logout.php">LOGOUT</a>
-                <a class="b" href="user.php">JADWAL VAKSIN</a>
+                <a class="b active" href="user.php">JADWAL VAKSIN</a>
                 <a class="c" href="home.php">HOME</a>
-                <a class="d active" href="rumahsakit.php">REKOMENDASI RS</a>
+                <a class="d" href="rumahsakit.php">REKOMENDASI RS</a>
+                <a class="e" href="update.php">EDIT PROFILE</a>
         </div>
 
         <div class="table">

@@ -15,6 +15,10 @@
         function myFunction() {
             document.getElementById("changevaksin").submit(); 
         }
+
+        function fungsiSort() {
+            document.getElementById("changesort").submit();
+        }
     </script>
 
     <body>
@@ -25,7 +29,8 @@
                 <a class="b" href="user.php">JADWAL VAKSIN</a>
                 <a class="c" href="home.php">HOME</a>
                 <a class="d active" href="rumahsakit.php">REKOMENDASI RS</a>
-                <a class="e" href="test.php">TEST</a>
+                <a class="e" href="update.php">EDIT PROFILE</a>
+                <!-- <a class="e" href="test.php">TEST</a> -->
         </div>
         
         <div class="table">
@@ -37,6 +42,8 @@
                         ?>
                         <form id="changevaksin" name="changevaksin" action="rumahsakit.php" method="POST">
                             <select id = "cbvaksin" name="cbvaksin" onchange="myFunction()">
+                            <option>Pilih</option>
+                            <option value="all">Semua Vaksin</option>
                             <?php
                             while($hv=mysqli_fetch_array($vaksin))
                             {
@@ -49,10 +56,13 @@
                         </form>
                     </td>
                     <td>
-                        <select name = "sorting">
-                            <option value = "ASC">Termurah</option>
-                            <option value = "DESC">Termahal</option>
-                        </select>
+                     <!--    <form id="changesort" name="changesort" action="rumahsakit.php" method="POST">
+                            <select id = "sorting" name = "sorting" onchange="fungsiSort()">
+                                <option value ="">Bebas</option>
+                                <option value = "ASC">Termurah</option>
+                                <option value = "DESC">Termahal</option>
+                            </select>
+                        </form> -->
                     </td>
                 </tr>
                 <tr>
@@ -64,10 +74,11 @@
                 </tr>
                 <?php
                     $no = 1; 
-                    if (isset($_POST["cbvaksin"])) {
-                        $qry = mysqli_query($conn, "SELECT rs.id_rumahsakit, rs.nama_rumahsakit, v.nama_vaksin, d.biaya FROM rumahsakit rs INNER JOIN detil_rumahsakit d ON rs.id_rumahsakit = d.id_rumahsakit INNER JOIN vaksin v ON d.id_vaksin = v.id_vaksin WHERE v.id_vaksin = '".$_POST["cbvaksin"]."'");
+                    // echo $_POST["sorting"];
+                    if (isset($_POST["cbvaksin"]) && $_POST["cbvaksin"] != "all") {
+                            $qry = mysqli_query($conn, "SELECT rs.id_rumahsakit, rs.nama_rumahsakit, v.nama_vaksin, d.biaya FROM rumahsakit rs INNER JOIN detil_rumahsakit d ON rs.id_rumahsakit = d.id_rumahsakit INNER JOIN vaksin v ON d.id_vaksin = v.id_vaksin WHERE v.id_vaksin = '".$_POST["cbvaksin"]."' ORDER BY d.biaya");
                     } else {
-                        $qry = mysqli_query($conn, "SELECT rs.id_rumahsakit, rs.nama_rumahsakit, v.nama_vaksin, d.biaya FROM rumahsakit rs, detil_rumahsakit d, vaksin v WHERE rs.id_rumahsakit = d.id_rumahsakit AND d.id_vaksin = v.id_vaksin");
+                        $qry = mysqli_query($conn, "SELECT rs.id_rumahsakit, rs.nama_rumahsakit, v.nama_vaksin, d.biaya FROM rumahsakit rs, detil_rumahsakit d, vaksin v WHERE rs.id_rumahsakit = d.id_rumahsakit AND d.id_vaksin = v.id_vaksin ORDER BY d.biaya");
                     }
                     while($row=mysqli_fetch_array($qry)){
                 ?>
