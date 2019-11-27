@@ -1,0 +1,402 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html, body{
+    width: 100%;
+    height: 100%;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.background{
+    width: 100%;
+    height: 100%;
+    background-image: url('../sbd/b.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    overflow-y: auto;
+}
+
+.nav{
+    width: 350px;
+    height: auto;
+    position: absolute;
+    top: 20%;
+    left: 0;
+}
+
+.nav a{
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    margin: 5px 0;
+    float: left;
+    display: inline-block;
+    background-color: rgb( 74, 112, 123);
+    color: white;
+    text-align: center;
+    transition: 300ms;
+}
+
+a.active, .nav a:hover{
+    background-color: white;
+    color: rgb( 74, 112, 123);
+    width: 100%;
+}
+
+.a{
+    width: 95%;
+    height: 90px;
+    font-size: 28px;
+    line-height: 90px;
+}
+
+.b{
+    width: 75%;
+    height: 90px;
+    font-size: 28px;
+    line-height: 90px;
+}
+
+.c{
+    width: 60%;
+    height: 90px;
+    font-size: 28px;
+    line-height: 90px;
+}
+
+.d{
+    width: 70%;
+    height: 90px;
+    font-size: 28px;
+    line-height: 90px;
+}
+
+.e{
+    width: 85%;
+    height: 90px;
+    font-size: 28px;
+    line-height: 90px;
+}
+
+
+
+.log-form{
+    width: 400px;
+    height: 400px;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    padding: 0;
+    transform: translate(-50%,-50%); 
+    opacity: 0.8;
+    background-color: rgb( 74, 112, 123);
+    color: white;
+    box-sizing: border-box;
+    padding: 60px 70px;
+    font-family: 'Roboto Mono', monospace;
+    line-height: 32px;
+}
+
+.log-form input{
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    border-bottom: 1px solid white;
+    height: 25px;
+    margin-bottom: 15px;
+    color: white;
+}
+
+.log-form h5{
+    font-size: 50px;
+    text-align: center;
+    line-height: 75px;
+    margin-bottom: 10px;
+}
+
+.log-form h1{
+    font-size: 14px;
+}
+
+.btn{
+    line-height: 15px;
+    height: 35px;
+    width: 100%;
+    background: transparent;
+    border: 1px solid white;
+    color: white;
+    padding: 5px;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.forgot{
+    width: 100%;
+    margin-top: 10px;
+    color: white;
+    font-size: 12px;
+    text-align: right;
+}
+
+.register{
+    width: 400px;
+    height: 685px;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%); 
+    opacity: 0.8;
+    background-color: rgb( 74, 112, 123);
+    color: white;
+    box-sizing: border-box;
+    font-family: 'Roboto Mono', monospace;
+    line-height: 32px;
+    padding: 60px 75px;
+}
+
+.register input{
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    border-bottom: 1px solid white;
+    height: 25px;
+    margin-bottom: 15px;
+    color:white;
+}
+
+.register select{
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    border-bottom: 1px solid white;
+    height: 25px;
+    margin-bottom: 15px;
+    color:white;
+}
+
+.register select::before{
+    content: '';
+    background: red;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 100px;
+    pointer-events: none;
+}
+
+.register h5{
+    font-size: 50px;
+    text-align: center;
+    line-height: 75px;
+    margin-bottom: 10px;
+}
+
+.register h1{
+    font-size: 14px;
+}
+
+.update{
+    width: 400px;
+    height: 600px;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%); 
+    opacity: 0.7;
+    background-color: black;
+    color: white;
+    box-sizing: border-box;
+    font-family: 'Roboto Mono', monospace;
+    line-height: 32px;
+    padding: 60px 75px;
+}
+
+.update input{
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    border-bottom: 1px solid white;
+    height: 25px;
+    margin-bottom: 15px;
+    color:white;
+}
+
+.update h5{
+    font-size: 50px;
+    text-align: center;
+    line-height: 75px;
+    margin-bottom: 10px;
+}
+
+.update h1{
+    font-size: 14px;
+}
+
+.content{
+    position: absolute;
+    width: 930px;
+    min-height: 500px;
+    height: auto;
+    right: 0;
+    bottom: 10px;
+    /*top: 10%;*/
+}
+
+.home{
+    position: absolute;
+    right: 30px;
+    bottom: 0;
+    color:black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+}
+
+.home h1{
+    font-size: 100px;
+    border-bottom: 5px solid black;
+    /* text-transform: uppercase; */
+}
+
+.home h3{
+    border-top: 2px black;
+    font-size: 20px;
+    padding-right: 5px 0;
+    opacity: 0.6;
+}
+
+.about{
+    position: absolute;
+    background-color: rgb( 74, 112, 123);
+    color: white;
+    box-sizing: border-box;
+    opacity: 0.8;
+    width: 1250px;
+    height: 1900px;
+    top: 10%;
+    left: 25%;
+    right: 10%;
+    padding: 60px 70px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    line-height: 25px;
+    font-size: 18px;
+    text-indent: 50px;
+}
+
+.about h5{
+    font-size: 60px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    line-height: 100px;
+    text-indent: 0px;
+}
+
+.about h3{
+    line-height: 60px;
+    font-size: 25px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-indent: 0px;
+}
+
+.about h2{
+    line-height: 40px;
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-indent: 0px;
+}
+
+.table{
+    position: absolute;
+    background-color: rgb( 74, 112, 123);
+    color: white;
+    box-sizing: border-box;
+    opacity: 0.8;
+    width: 1250px;
+    height: 1900px;
+    top: 10%;
+    left: 25%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    line-height: 25px;
+    font-size: 18px;
+}
+
+.table th,td {
+    border-bottom: 1px solid white;
+    text-align: center;
+    width: 1000px;
+    height: 50px;
+    color: white;
+}
+
+.table .UD{
+    width: 60px;
+    height: auto;
+    position: absolute;
+    top: 20%;
+    right: 0;
+    width: 30%;
+    height: 40px;
+    font-size: 15px;
+    line-height: 50px;
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    margin: 5px 0;
+    float: right;
+    display: inline-block;
+    background-color: black;
+    color: white;
+    text-align: center;
+    transition: 300ms;
+}
+
+.tesfont{
+    width: 100%;
+    text-align: right;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 30px;
+}
+
+.logindulu{
+    width: 400px;
+    height: 250px;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    padding: 0;
+    transform: translate(-50%,-50%); 
+    opacity: 0.8;
+    background-color: rgb( 74, 112, 123);
+    color: white;
+    box-sizing: border-box;
+    padding: 60px 60px;
+    line-height: 32px;
+}
+
+.logindulu h5{
+    font-size: 35px;
+    text-align: center;
+    line-height: 75px;
+    margin-bottom: 10px;
+    font-family: 'Caveat', cursive;
+}
+
+.btn-btn{
+    line-height: 15px;
+    height: 35px;
+    width: 80%;
+    background: transparent;
+    border: 1px solid white;
+    color: white;
+    padding: 7px 90px 7px 90px;
+    font-family: 'Roboto Mono', monospace;
+    margin: 15px 30px 40px 30px;
+}
+
