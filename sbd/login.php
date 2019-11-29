@@ -17,8 +17,8 @@
                 <a class="a active" href="login.php">LOGIN</a>
                 <a class="b" href="Register.php">REGISTER</a>
                 <a class="c" href="logindulu.html">HOME</a>
-                <!-- <a class="d" href="logindulu.html">ABOUT AJK</a>
-                <a class="e" href="logindulu.html">USER</a> -->
+                <a class="d" href="logindulu.html">REKOMENDASI RS</a>
+                <a class="e" href="logindulu.html">REKOMENDASI RS</a>
             </div>
 
                 <div class="log-form">

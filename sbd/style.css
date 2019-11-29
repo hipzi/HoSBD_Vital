@@ -203,14 +203,14 @@ a.active, .nav a:hover{
 }
 
 .update{
-    width: 400px;
+    width: 700px;
     height: 600px;
     top: 50%;
     left: 50%;
     position: absolute;
     transform: translate(-50%,-50%); 
-    opacity: 0.7;
-    background-color: black;
+    opacity: 0.8;
+    background-color:rgb( 74, 112, 123);
     color: white;
     box-sizing: border-box;
     font-family: 'Roboto Mono', monospace;

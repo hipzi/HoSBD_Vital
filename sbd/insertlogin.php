@@ -14,6 +14,6 @@
                 }
             else {
                 echo "Failed to Login";
-                header("refresh:10; url=login.php");
+                header("refresh:3; url=login.php");
             }
 ?>

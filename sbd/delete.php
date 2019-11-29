@@ -1,6 +1,6 @@
 <?php
     include "conn.php";
-    $id = $_GET['id'];
-    mysqli_query($conn, "DELETE FROM Register WHERE id='$id'");
+    $pk = $_GET['username'];
+    mysqli_query($conn, "DELETE FROM pasien WHERE username='$pk'");
     header("location:logout.php");
 ?>

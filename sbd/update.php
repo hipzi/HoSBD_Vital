@@ -1,7 +1,6 @@
 <?php
     include "conn.php";
-    $id = $_GET['username'];
-    $qe = mysqli_query($conn, "SELECT * FROM pasien WHERE username='$id'");
+    $qe = mysqli_query($conn, "SELECT * FROM pasien");
     $row = mysqli_fetch_array($qe);
 ?>
 <!DOCTYPE html>
@@ -24,54 +23,43 @@
                 <a class="b" href="user.php">JADWAL VAKSIN</a>
                 <a class="c" href="home.php">HOME</a>
                 <a class="d" href="rumahsakit.php">REKOMENDASI RS</a>
-                <a class="e active" href="update.php">EDIT PROFILE</a>
+                <a class="e active" href="update.php">PROFILE</a>
             </div>
 
                 <div class="update">
-                    <h5>UPDATE</h5>
+                    <h5>PROFILE</h5>
 
-                    <form method="POST">
-                        <b> <h1>Username</h1> </b>
-                        <p> <input type="text" title="Username" name="Username" value="<?php echo $row['Username'] ?>" /> </p>
-                        <b> <h1>Nama</h1> </b>
-                        <p> <input type="text" title="Nama" name="Nama" value="<?php echo $row['Nama'] ?>" /> </p>
-                        <b> <h1>Angkatan</h1> </b>
-                        <p> <input type="text" title="Angkatan" name="Angkatan" value="<?php echo $row['Angkatan'] ?>" /> </p>
-                        <b> <h1>Email</h1> </b>
-                        <p> <input type="text" title="Email" name="Email" value="<?php echo $row['Email'] ?>" /> </p>
-                        <b> <h1>Password</h1> </b>
-                        <p> <input type="Password" title="Password" name="Password" value="<?php echo $row['Password'] ?>" /> </p>
-                        <p> <button type="submit" class="btn" value="Update">Update</button> </p>
-                    </form>
+                    <table>
+                        <tr>
+                            <td>No</td>
+                            <td>Username</td>
+                            <td>Nama</td>
+                            <td>Tanggal Lahir</td>
+                            <td>Jenis Kelamin</td>
+                            <td>Alamat</td>
+                            <td>Opsi</td>
+                        </tr>
 
-                    <?php
-                        $Username = $_POST['Username'];
-                        $Nama = $_POST['Nama'];
-                        $Angkatan = $_POST['Angkatan'];
-                        $Email = $_POST['Email'];
-                        $Password = $_POST['Password'];
+                        <?php
+                            $no = 1;
+                            $qry = mysqli_query($conn, "SELECT * FROM pasien");
+                            while($row=mysqli_fetch_array($qry)){
+                        ?>
 
-                        $host = 'localhost';
-                        $dbUsername = 'root';
-                        $dbPassword = 'bismillah582';
-                        $dbname = 'WebAJK';
+                        <tr>
+                            <td><?php echo $no++; ?></td>
+                            <td><?php echo $row['username']; ?></td>
+                            <td><?php echo $row['nama_pasien']; ?></td>
+                            <td><?php echo $row['tgl_lahir']; ?></td>
+                            <td><?php echo $row['jenis_kelamin']; ?></td>
+                            <td><?php echo $row['alamat']; ?></td>
+                            <td><a href="update-process.php?username=<?php echo $row['username']; ?>">UPDATE</a> 
+                            <a class="f" onclick="return confirm('Yakin ?')" href="delete.php?username=<?php echo $row['username']; ?>">DELETE</a></<a>
+                        </tr>
+                    <?php }?>
+                </table>
 
-                        $conn = new mysqli($host, $dbUsername, $dbPassword, $dbname);
-
-                        if($conn->connect_error){
-                            die('Connection Failed : '.$conn->connect_error);
-                        }
-                        else{
-                            $hash = md5($Password);
-                            $stmt = $conn->prepare("UPDATE Register SET Username='$Username', Nama='$Nama', Angkatan='$Angkatan',
-                            Email='$Email', Password='$hash' WHERE id='$id'");
-                            $stmt->execute();
-                            $stmt->close;
-                            $conn->close;
-                        }
-
-                    ?>
-                </div>
+            </div>
 
         </div>
 

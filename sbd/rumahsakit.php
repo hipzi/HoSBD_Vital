@@ -29,8 +29,7 @@
                 <a class="b" href="user.php">JADWAL VAKSIN</a>
                 <a class="c" href="home.php">HOME</a>
                 <a class="d active" href="rumahsakit.php">REKOMENDASI RS</a>
-                <a class="e" href="update.php">EDIT PROFILE</a>
-                <!-- <a class="e" href="test.php">TEST</a> -->
+                <a class="e" href="update.php">PROFILE</a>
         </div>
         
         <div class="table">

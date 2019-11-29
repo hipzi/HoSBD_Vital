@@ -19,7 +19,7 @@
                 <a class="b active" href="user.php">JADWAL VAKSIN</a>
                 <a class="c" href="home.php">HOME</a>
                 <a class="d" href="rumahsakit.php">REKOMENDASI RS</a>
-                <a class="e" href="update.php">EDIT PROFILE</a>
+                <a class="e" href="update.php">PROFILE</a>
         </div>
 
         <div class="table">
@@ -27,11 +27,9 @@
                     <tr>
                         <th>No</th>
                         <th>Vaksin</th>
-                        <!-- <th>Tanggal Lahir</th> -->
                         <th>Pemberian 1</th>
                         <th>Pemberian 2</th>
                         <th>Pemberian 3</th>
-                        <!-- <th>Jarak</th> -->
                     </tr>
 
                 <?php
@@ -94,6 +92,7 @@
                 <?php }?>
             </table>
             </div>
+        
         </div>
 
         <script type="text/javascript" src="jquery-3.4.1.min.js"></script>
