@@ -1,6 +1,6 @@
 <?php
     include "conn.php";
-    $qe = mysqli_query($conn, "SELECT * FROM pasien");
+    $qe = mysqli_query($conn, "SELECT * FROM pasien where username='z'");
     $row = mysqli_fetch_array($qe);
 ?>
 <!DOCTYPE html>
@@ -24,6 +24,7 @@
                 <a class="c" href="home.php">HOME</a>
                 <a class="d" href="rumahsakit.php">REKOMENDASI RS</a>
                 <a class="e active" href="update.php">PROFILE</a>
+                <a class="f" href="editdata.php">REALISASI VAKSIN</a>
             </div>
 
                 <div class="update">
@@ -42,7 +43,7 @@
 
                         <?php
                             $no = 1;
-                            $qry = mysqli_query($conn, "SELECT * FROM pasien");
+                            $qry = mysqli_query($conn, "SELECT * FROM pasien where username='z'");
                             while($row=mysqli_fetch_array($qry)){
                         ?>
 

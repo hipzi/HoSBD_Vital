@@ -30,6 +30,7 @@
                 <a class="c" href="home.php">HOME</a>
                 <a class="d active" href="rumahsakit.php">REKOMENDASI RS</a>
                 <a class="e" href="update.php">PROFILE</a>
+                <a class="f" href="update.php">REALISASI VAKSIN</a>
         </div>
         
         <div class="table">

@@ -32,7 +32,7 @@
                         <b> <h1>Password</h1> </b>
                         <p> <input type="Password" title="password" name="password" /> </p>
                         <b> <h1>Tanggal Lahir</h1> </b>
-                        <p> <input type="text" title="tgl_lahir" name="tgl_lahir" /> </p>
+                        <p> <input type="date" title="tgl_lahir" name="tgl_lahir" /> </p>
                         <b> <h1>Jenis Kelamin</h1> </b>
                         <select name="jenis_kelamin">
                                 <option></option>

@@ -82,6 +82,12 @@ a.active, .nav a:hover{
     line-height: 90px;
 }
 
+.f{
+    width: 90%;
+    height: 90px;
+    font-size: 28px;
+    line-height: 90px;
+}
 
 
 .log-form{
@@ -177,7 +183,7 @@ a.active, .nav a:hover{
     border-bottom: 1px solid white;
     height: 25px;
     margin-bottom: 15px;
-    color:white;
+    color:black;
 }
 
 .register select::before{
@@ -199,6 +205,66 @@ a.active, .nav a:hover{
 }
 
 .register h1{
+    font-size: 14px;
+}
+
+.editdata{
+    width: 400px;
+    height: 685px;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%); 
+    opacity: 0.8;
+    background-color: rgb( 74, 112, 123);
+    color: white;
+    box-sizing: border-box;
+    font-family: 'Roboto Mono', monospace;
+    line-height: 32px;
+    padding: 60px 75px;
+}
+
+.editdata input{
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    border-bottom: 1px solid white;
+    height: 25px;
+    margin-bottom: 15px;
+    color:white;
+}
+
+.editdata select{
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    border-bottom: 1px solid white;
+    height: 25px;
+    margin-bottom: 15px;
+    color:black;
+}
+
+.editdata select::before{
+    content: '';
+    background: red;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 100px;
+    pointer-events: none;
+}
+
+.editdata h5{
+    font-size: 50px;
+    text-align: center;
+    line-height: 75px;
+    margin-bottom: 10px;
+}
+
+.editdata h1{
     font-size: 14px;
 }
 

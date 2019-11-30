@@ -18,7 +18,7 @@
                 <a class="b" href="Register.php">REGISTER</a>
                 <a class="c" href="logindulu.html">HOME</a>
                 <a class="d" href="logindulu.html">REKOMENDASI RS</a>
-                <a class="e" href="logindulu.html">REKOMENDASI RS</a>
+                <a class="e" href="logindulu.html">PROFILE</a>
             </div>
 
                 <div class="log-form">

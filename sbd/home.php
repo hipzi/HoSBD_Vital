@@ -16,6 +16,7 @@
                 <a class="c active" href="home.php">HOME</a>
                 <a class="d" href="rumahsakit.php">REKOMENDASI RS</a>
                 <a class="e" href="update.php">PROFILE</a>
+                <a class="f" href="editdata.php">REALISASI VAKSIN</a>
             </div>
 
             <div class="content">
