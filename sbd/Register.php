@@ -17,8 +17,9 @@
                 <a class="a" href="login.php">LOGIN</a>
                 <a class="b active" href="Register.php">REGISTER</a>
                 <a class="c" href="logindulu.html">HOME</a>
-                <a class="c" href="logindulu.html">REKOMENDASI RS</a>
-                <a class="c" href="logindulu.html">PROFILE</a>
+                <a class="d" href="logindulu.html">REKOMENDASI RS</a>
+                <a class="e" href="logindulu.html">PROFILE</a>
+                <a class="f" href="logindulu.html">REALISASI VAKSIN</a>
             </div>
 
                 <div class="register">

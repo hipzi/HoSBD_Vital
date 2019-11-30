@@ -30,35 +30,26 @@
                 <div class="update">
                     <h5>PROFILE</h5>
 
-                    <table>
-                        <tr>
-                            <td>No</td>
-                            <td>Username</td>
-                            <td>Nama</td>
-                            <td>Tanggal Lahir</td>
-                            <td>Jenis Kelamin</td>
-                            <td>Alamat</td>
-                            <td>Opsi</td>
-                        </tr>
-
                         <?php
-                            $no = 1;
                             $qry = mysqli_query($conn, "SELECT * FROM pasien where username='z'");
                             while($row=mysqli_fetch_array($qry)){
                         ?>
 
-                        <tr>
-                            <td><?php echo $no++; ?></td>
-                            <td><?php echo $row['username']; ?></td>
-                            <td><?php echo $row['nama_pasien']; ?></td>
-                            <td><?php echo $row['tgl_lahir']; ?></td>
-                            <td><?php echo $row['jenis_kelamin']; ?></td>
-                            <td><?php echo $row['alamat']; ?></td>
-                            <td><a href="update-process.php?username=<?php echo $row['username']; ?>">UPDATE</a> 
-                            <a class="f" onclick="return confirm('Yakin ?')" href="delete.php?username=<?php echo $row['username']; ?>">DELETE</a></<a>
-                        </tr>
+                            <b> <h1>Username<h1> </b>
+                            <p><?php echo $row['username']; ?></p>
+                            <b> <h1>Nama<h1> </b>
+                            <p><?php echo $row['nama_pasien']; ?></p>
+                            <b> <h1>Tanggal Lahir<h1> </b>
+                            <p><?php echo $row['tgl_lahir']; ?></p>
+                            <b> <h1>Jenis Kelamin<h1> </b>
+                            <p><?php echo $row['jenis_kelamin']; ?></p>
+                            <b> <h1>Alamat<h1> </b>
+                            <p><?php echo $row['alamat']; ?> </br> 
+                            <b> <h1>Opsi<h1> </b>
+                            <a href="update-process.php?username=<?php echo $row['username']; ?>">UPDATE</a> </br>
+                            <a href="change-password.php?username=<?php echo $row['username']; ?>">CHANGE PASSWORD</a> </br>
+                            <a onclick="return confirm('Yakin ?')" href="delete.php?username=<?php echo $row['username']; ?>">DELETE</a>
                     <?php }?>
-                </table>
 
             </div>
 
