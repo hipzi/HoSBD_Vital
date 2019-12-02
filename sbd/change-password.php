@@ -23,7 +23,7 @@
                 <a class="a" href="logout.php">LOGOUT</a>
                 <a class="b" href="user.php">JADWAL VAKSIN</a>
                 <a class="c" href="home.php">HOME</a>
-                <a class="d" href="rumahsakit.php">REKOMENDASI RS</a>
+                <a class="d" href="pilihrekomendasi.php">REKOMENDASI RS</a>
                 <a class="e active" href="update.php">PROFILE</a>
             </div>
 
@@ -32,14 +32,14 @@
 
                     <form action="insertchange.php" method="POST">
                     <b> <h1>Username</h1> </b>
-                        <p> <input type="text" title="username" name="username" value="<?php echo $row['username'] ?>" /> </p>
+                        <p> <input type="text" title="username" name="username" id="username" value="<?php echo $row['username'] ?>"/> </p>
                     <b> <h1>Current Password</h1> </b>
-                        <p><input type="password" name="password"></p>
+                        <p><input type="password" name="password" title="password" id="password"></p>
                     <b> <h1>New Password</h1> </b>
-                        <p><input type="password" name="newpassword"></p>
+                        <p><input type="password" name="newpassword" title="newpassword" id="newpassword"></p>
                     <b> <h1>Confirm Password</h1> </b>
-                        <p><input type="password" name="confirmpassword"></p>
-                        <p> <button type="submit" class="btn" value="update">Change</button> </p>
+                        <p><input type="password" name="confirmpassword" title="confirmpassword" id="confirmpassword"></p>
+                        <button type="submit" class="btn" value="update">Change</button>
                     </form>
                 </div>
 

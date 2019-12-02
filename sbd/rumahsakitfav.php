@@ -41,7 +41,7 @@
                         $vaksin = mysqli_query($conn, "SELECT id_vaksin, nama_vaksin FROM vaksin"); 
                         ?>
                         <p> Vaksin: </p>
-                        <form id="changevaksin" name="changevaksin" action="rumahsakit.php" method="POST">
+                        <form id="changevaksin" name="changevaksin" action="rumahsakitfav.php" method="POST">
                             <select id = "cbvaksin" name="cbvaksin" onchange="myFunction()">
                             <option>Pilih</option>
                             <option value="all">Semua Vaksin</option>
@@ -56,57 +56,30 @@
                             </select>
                         </form>
                     </td>
-                    <td>
-                            <!-- <p>Rumah Sakit</p>
-                            <form id="changefav" name="changefav" action="rumahsakit.php" method="POST">
-                                <select id = "fav" name = "fav" onchange=fungsiFav()">
-                                    <option>Pilih</option>
-                                    <option value ="1">Paling Favorit</option>
-                                </select>
-                            </form> -->
-                    </td>
                 </tr>
                 <tr>
                     <th>No</th>
                     <th>Rumah Sakit</th>
-                    <th>Vaksin</th>
-                    <th>Biaya</th>
-                    <!-- <th>Jarak</th> -->
+                    <th>Frekuensi Dikunjungi</th>
                 </tr>
                 <?php
                     $no = 1; 
                     // echo $_POST["sorting"];
                     if (isset($_POST["cbvaksin"]) && $_POST["cbvaksin"] != "all") {
-                            $qry = mysqli_query($conn, "SELECT rs.id_rumahsakit, rs.nama_rumahsakit, v.nama_vaksin, d.biaya FROM rumahsakit rs INNER JOIN detil_rumahsakit d ON rs.id_rumahsakit = d.id_rumahsakit INNER JOIN vaksin v ON d.id_vaksin = v.id_vaksin WHERE v.id_vaksin = '".$_POST["cbvaksin"]."' ORDER BY d.biaya");
+                        $nama = mysqli_query($conn, "SELECT id_vaksin, nama_vaksin FROM vaksin WHERE id_vaksin = '".$_POST["cbvaksin"]."'"); 
+                        $ambil = mysqli_fetch_array($nama);
+                        echo $ambil['nama_vaksin'];
+                        $qry = mysqli_query($conn, "SELECT COUNT(t.id_transaksi) as jumlah, r.nama_rumahsakit, u.id_vaksin FROM transaksi t, rumahsakit r, usiapemberian u WHERE t.id_rumahsakit = r.id_rumahsakit AND t.id_usia = u.id_usia GROUP BY r.id_rumahsakit, u.id_vaksin HAVING u.id_vaksin = '".$_POST["cbvaksin"]."' ORDER BY COUNT(t.id_transaksi) DESC");
                     } else {
-                        $qry = mysqli_query($conn, "SELECT rs.id_rumahsakit, rs.nama_rumahsakit, v.nama_vaksin, d.biaya FROM rumahsakit rs, detil_rumahsakit d, vaksin v WHERE rs.id_rumahsakit = d.id_rumahsakit AND d.id_vaksin = v.id_vaksin ORDER BY d.biaya");
+                        echo "Semua Vaksin";
+                        $qry = mysqli_query($conn, "SELECT count(t.id_transaksi) as jumlah, r.nama_rumahsakit FROM transaksi t INNER JOIN rumahsakit r ON t.id_rumahsakit = r.id_rumahsakit GROUP BY t.id_rumahsakit ORDER BY count(t.id_transaksi) DESC");
                     }
                     while($row=mysqli_fetch_array($qry)){
                 ?>
-    
-            <!-- <div class="UD">
-                <!-- class="f" href="update.php?id=<?php echo $row['id']; ?>">UPDATE</! -->
-                <!-- <a class="f" onclick="return confirm('Yakin ?')" href="delete.php?id=<?php echo $row['id']; ?>">DELETE</!-->
-            <!-- </div> -->
-
                     <tr>
                         <td><?php echo $no++; ?></td>
                         <td><?php echo $row['nama_rumahsakit']; ?></td>
-                        <td><?php 
-                            // $ambilulang = mysqli_query($conn, "SELECT v.nama_vaksin, d.biaya FROM rumahsakit rs, detil_rumahsakit d, vaksin v WHERE rs.id_rumahsakit = d.id_rumahsakit AND d.id_vaksin = v.id_vaksin AND rs.id_rumahsakit = '".$row['id_rumahsakit']."'");
-                            // while($hasil=mysqli_fetch_array($ambilulang))                            
-                            // {
-                                echo $row['nama_vaksin'];
-                            // }   
-                        ?></td>
-                        <td><?php 
-                            // $ambilulang = mysqli_query($conn, "SELECT v.nama_vaksin, d.biaya FROM rumahsakit rs, detil_rumahsakit d, vaksin v WHERE rs.id_rumahsakit = d.id_rumahsakit AND d.id_vaksin = v.id_vaksin AND rs.id_rumahsakit = '".$row['id_rumahsakit']."'");
-                            // while($hasil=mysqli_fetch_array($ambilulang))                            
-                            // {
-                                echo $row['biaya'];
-                            // }
-                        ?></td>
-                    
+                        <td><?php echo $row['jumlah']; ?></td>
                     </tr>
                 <?php }?>
             </table>

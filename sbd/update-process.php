@@ -23,8 +23,9 @@
                 <a class="a" href="logout.php">LOGOUT</a>
                 <a class="b" href="user.php">JADWAL VAKSIN</a>
                 <a class="c" href="home.php">HOME</a>
-                <a class="d" href="rumahsakit.php">REKOMENDASI RS</a>
+                <a class="d" href="pilihrekomendasi.php">REKOMENDASI RS</a>
                 <a class="e active" href="update.php">PROFILE</a>
+                <!-- <a class="f" href="editdata.php">REALISASI VAKSIN</a> -->
             </div>
 
                 <div class="update">
@@ -32,10 +33,10 @@
 
                     <form action="insertupdate.php" method="POST">
                     <b> <h1>Username</h1> </b>
-                        <p> <input type="text" title="username" name="username" value="<?php echo $row['username'] ?>" /> </p>
+                        <p> <?php echo $row['username'] ?> </p>
                     <b> <h1>Alamat</h1> </b>
                         <p> <input type="text" title="alamat" name="alamat" value="<?php echo $row['alamat'] ?>" /> </p>
-                        <p> <button type="submit" class="btn" value="update">Update</button> </p>
+                         <button type="submit" class="btn" value="update">Update</button> 
                     </form>
                 </div>
 

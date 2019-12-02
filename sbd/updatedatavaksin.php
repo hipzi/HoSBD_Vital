@@ -1,7 +1,7 @@
 <?php
     include "conn.php";
     $pk = @$_GET['idv'];
-    $qe = mysqli_query($conn, "SELECT v.id_vaksin, v.nama_vaksin, u.no_urut FROM usiapemberian u INNER JOIN vaksin v ON u.id_vaksin = v.id_vaksin WHERE u.id_usia='$pk'");
+    $qe = mysqli_query($conn, "SELECT v.id_vaksin, v.nama_vaksin, u.no_urut, r.nama_rumahsakit, t.tgl_transaksi FROM usiapemberian u INNER JOIN vaksin v  ON u.id_vaksin = v.id_vaksin INNER JOIN transaksi t ON t.id_usia = u.id_usia INNER JOIN rumahsakit r ON r.id_rumahsakit = t.id_rumahsakit WHERE u.id_usia='$pk' AND t.username = 'z'");
     $row = mysqli_fetch_array($qe);
 ?>  
 <!DOCTYPE html>
@@ -41,23 +41,23 @@
                             document.getElementbyId('cbvaksin').disabled=false;
                         }
                     </script>
-
-                    <form action="insertvaksin.php" method="POST" onsubmit="enableSubmit();">
+                    
+                    <form action="updatevaksin.php" method="POST" onsubmit="enableSubmit();">
 
                         <b> <h1>Jenis Vaksin</h1> </b>
                         <p>
-                            <select id="cbvaksin" name="cbvaksin" title="cbvaksin">
+                            <select  id="cbvaksin" title="cbvaksin" name="cbvaksin">
                                 <option value="<?php echo $row['id_vaksin']; ?>" selected><?php echo $row['nama_vaksin']; ?></option>
                             </select>
                         </p>
                         <b> <h1>Perulangan</h1> </b>
                         <p>
-                            <select id="cbperulangan" name="cbperulangan" title="cbperulangan">
+                            <select id="cbperulangan" title="cbperulangan" name="cbperulangan">
                                 <option value="<?php echo $row['no_urut']; ?>" selected><?php echo $row['no_urut']; ?></option>
                             </select>
                         </p>
                         <b> <h1>Tanggal Terima Vaksin</h1> </b>
-                        <p> <input type="date" id="tgl_terima" title="tgl_terima" name="tgl_terima" value="<?php echo date('Y-m-d'); ?>"/> </p>
+                        <p> <input type="date" title="tgl_terima" name="tgl_terima" value="<?php echo $row['tgl_transaksi'] ?>"/> </p>
                         <b> <h1>Rumah Sakit/Puskesmas</h1> </b>
                         <p>
                             <select id = "cbrs" name="cbrs">
@@ -65,7 +65,7 @@
                                 while($hvr=mysqli_fetch_array($rs))
                                 {
                                     ?>
-                                    <option value="<?php echo $hvr['id_rumahsakit'] ?>"><?php echo $hvr['nama_rumahsakit'] ?></option>
+                                    <option value="<?php echo $hvr['id_rumahsakit'] ?>" <?php echo ($row['nama_rumahsakit'] == $hvr['nama_rumahsakit']) ? 'selected' : ''; ?> ><?php echo $hvr['nama_rumahsakit'] ?></option>
                                     <?php
                                 }
                                 ?>

@@ -13,7 +13,7 @@
             die('Connection Failed : '.$conn->connect_error);
         }
         else{
-            $stmt = $conn->prepare("UPDATE pasien SET alamat='$alamat' WHERE username='$username'");
+            $stmt = $conn->prepare("UPDATE pasien SET alamat='$alamat' WHERE username='z'");
             $stmt->execute();
             $msg = "Update Successfully";
             header('location:update.php');

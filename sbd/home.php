@@ -14,9 +14,9 @@
                 <a class="a" href="logout.php">LOGOUT</a>
                 <a class="b" href="user.php">JADWAL VAKSIN</a>
                 <a class="c active" href="home.php">HOME</a>
-                <a class="d" href="rumahsakit.php">REKOMENDASI RS</a>
+                <a class="d" href="pilihrekomendasi.php">REKOMENDASI RS</a>
                 <a class="e" href="update.php">PROFILE</a>
-                <a class="f" href="editdata.php">REALISASI VAKSIN</a>
+                <!-- <a class="f" href="editdata.php">REALISASI VAKSIN</a> -->
             </div>
 
             <div class="content">

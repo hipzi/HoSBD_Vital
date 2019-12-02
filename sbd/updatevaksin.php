@@ -14,15 +14,15 @@
             die('Connection Failed : '.$conn->connect_error);
         }
         else{
-            // echo $vak + " " + $ulang;
-            $vaksin = mysqli_query($conn, "SELECT id_usia FROM usiapemberian WHERE id_vaksin = '".$vak."' AND no_urut = '".$ulang."'");
-            $hv=mysqli_fetch_array($vaksin);
-            $idu = $hv['id_usia'];
-            $stmt = $conn->prepare("INSERT into transaksi (id_usia, id_rumahsakit, username, tgl_transaksi) values ('$idu','$rs','z','$tgl_transaksi')");
+            $trans = mysqli_query($conn, "SELECT id_transaksi FROM transaksi where username = 'z' AND id_usia = (SELECT id_usia FROM usiapemberian WHERE id_vaksin = '".$vak."' AND no_urut = '".$ulang."')");
+            $hv=mysqli_fetch_array($trans);
+            $idt = $hv['id_transaksi'];
+            echo $idt;
+            $stmt = $conn->prepare("UPDATE transaksi SET id_rumahsakit = '".$rs."', tgl_transaksi = '".$tgl_transaksi."' WHERE id_transaksi = '".$idt."'");
             $stmt->execute();
-            $msg = "Insert Vaccine Successfully";
+            $msg = "Update Vaccine Successfully";
             header('location:user.php');
-            echo "Insert Vaccine Successfully";
+            echo "Update Vaccine Successfully";
             $stmt->close;
             $conn->close;
         }
