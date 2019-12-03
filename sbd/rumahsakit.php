@@ -19,6 +19,10 @@
         function fungsiFav() {
             document.getElementById("changefav").submit();
         }
+
+        // function Function() {
+        //     document.getElementById("sortbiaya").submit(); 
+        // }
     </script>
 
     <body>
@@ -54,15 +58,7 @@
                             ?>
                             </select>
                         </form>
-                    <!-- </td> -->
-                    <!-- <td> -->
-                            <!-- <p>Rumah Sakit</p>
-                            <form id="changefav" name="changefav" action="rumahsakit.php" method="POST">
-                                <select id = "fav" name = "fav" onchange=fungsiFav()">
-                                    <option>Pilih</option>
-                                    <option value ="1">Paling Favorit</option>
-                                </select>
-                            </form> -->
+
                     </!-->
                 </tr>
                 <tr>
@@ -73,7 +69,6 @@
                 </tr>
                 <?php
                     $no = 1; 
-                    // echo $_POST["sorting"];
                     if (isset($_POST["cbvaksin"]) && $_POST["cbvaksin"] != "all") {
                             $qry = mysqli_query($conn, "SELECT rs.id_rumahsakit, rs.nama_rumahsakit, v.nama_vaksin, d.biaya FROM rumahsakit rs INNER JOIN detil_rumahsakit d ON rs.id_rumahsakit = d.id_rumahsakit INNER JOIN vaksin v ON d.id_vaksin = v.id_vaksin WHERE v.id_vaksin = '".$_POST["cbvaksin"]."' ORDER BY d.biaya");
                     } else {
@@ -81,11 +76,6 @@
                     }
                     while($row=mysqli_fetch_array($qry)){
                 ?>
-    
-            <!-- <div class="UD">
-                <!-- class="f" href="update.php?id=<?php echo $row['id']; ?>">UPDATE</! -->
-                <!-- <a class="f" onclick="return confirm('Yakin ?')" href="delete.php?id=<?php echo $row['id']; ?>">DELETE</!-->
-            <!-- </div> -->
 
                     <tr>
                         <td><?php echo $no++; ?></td>

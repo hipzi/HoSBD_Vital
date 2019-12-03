@@ -35,6 +35,7 @@
         <div class="pilih">
                 <h5>BERDASARKAN</h5>
                 <p><a href="rumahsakit.php" class="btn-pilih_a">Biaya</a></p>
+                <p><a href="rumahsakitrange.php" class="btn-pilih_c">Range Biaya</a></p>
                 <p><a href="rumahsakitfav.php" class="btn-pilih_b">Frekuensi Kunjungan</a></p>
         </div>
 

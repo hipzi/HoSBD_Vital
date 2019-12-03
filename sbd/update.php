@@ -30,7 +30,8 @@
                     <h5>PROFILE</h5>
 
                         <?php
-                            $qry = mysqli_query($conn, "SELECT * FROM pasien where username='z'");
+                            $qry = mysqli_query($conn, "SELECT p.username, p.nama_pasien, p.tgl_lahir,
+                            p.jenis_kelamin, p.alamat FROM pasien p where username='z'");
                             while($row=mysqli_fetch_array($qry)){
                         ?>
 

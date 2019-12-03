@@ -14,7 +14,6 @@
             die('Connection Failed : '.$conn->connect_error);
         }
         else{
-            // echo $vak + " " + $ulang;
             $vaksin = mysqli_query($conn, "SELECT id_usia FROM usiapemberian WHERE id_vaksin = '".$vak."' AND no_urut = '".$ulang."'");
             $hv=mysqli_fetch_array($vaksin);
             $idu = $hv['id_usia'];

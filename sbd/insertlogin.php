@@ -4,7 +4,7 @@
     $username = $_POST['username'];
     $password = md5($_POST['password']);
 
-            $query = "SELECT * FROM pasien WHERE username='$username' AND password='$password'";
+            $query = "SELECT * FROM pasien p WHERE username='$username' AND password='$password'";
             $apa = $conn->query($query);
 
             if($apa->num_rows > 0) {
@@ -14,6 +14,6 @@
                 }
             else {
                 echo "Failed to Login";
-                header("refresh:3; url=login.php");
+                header("refresh:10; url=login.php");
             }
 ?>

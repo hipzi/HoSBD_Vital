@@ -512,7 +512,7 @@ a.active, .nav a:hover{
 
 .pilih{
     width: 400px;
-    height: 220px;
+    height: 270px;
     top: 50%;
     left: 50%;
     position: absolute;
@@ -538,6 +538,34 @@ a.active, .nav a:hover{
     margin-bottom: 30px;
 }
 
+.btn-pilih_i{
+    line-height: 15px;
+    height: 10px;
+    width: 9.9%;
+    text-align: center;
+    background: transparent;
+    border: 1px solid white;
+    color: white;
+    font-size: medium;
+    padding: 7px 125px 7px 125px;
+    font-family: 'Roboto Mono', monospace;
+    margin: 10px 50px 0px 45px;
+}
+
+.btn-pilih{
+    line-height: 15px;
+    height: 35px;
+    width: 30%;
+    text-align: center;
+    background: transparent;
+    border: 1px solid white;
+    color: white;
+    font-size: medium;
+    padding: 7px 125px 7px 125px;
+    font-family: 'Roboto Mono', monospace;
+    margin: 15px 50px 5px 45px;
+}
+
 .btn-pilih_a{
     line-height: 15px;
     height: 35px;
@@ -552,6 +580,20 @@ a.active, .nav a:hover{
     margin: 15px 50px 40px 45px;
 }
 
+.btn-pilih_c{
+    line-height: 15px;
+    height: 35px;
+    width: 100%;
+    text-align: center;
+    background: transparent;
+    border: 1px solid white;
+    color: white;
+    font-size: medium;
+    padding: 7px 97px 7px 97px;
+    font-family: 'Roboto Mono', monospace;
+    margin: 15px 50px 40px 45px;
+}
+
 .btn-pilih_b{
     line-height: 15px;
     height: 35px;
@@ -561,7 +603,7 @@ a.active, .nav a:hover{
     border: 1px solid white;
     color: white;
     font-size: medium;
-    padding: 7px 60px 7px 60px;
+    padding: 7px 59px 7px 59px;
     font-family: 'Roboto Mono', monospace;
     margin: 15px 50px 40px 45px;
 }
