@@ -20,10 +20,9 @@
                 <a class="c" href="home.php">HOME</a>
                 <a class="d" href="pilihrekomendasi.php">REKOMENDASI RS</a>
                 <a class="e" href="update.php">PROFILE</a>
-                <!-- <a class="f" href="editdata.php">REALISASI VAKSIN</a> -->
         </div>
 
-        <div class="table">
+        <div class="table user">
             <table>
                     <tr>
                         <th>No</th>
@@ -38,11 +37,6 @@
                     $qry = mysqli_query($conn, "SELECT id_vaksin, nama_vaksin FROM vaksin");
                     while($row=mysqli_fetch_array($qry)){
                 ?>
-    
-            <!-- <div class="UD">
-                <a class="f" href="update.php?id=<?php echo $row['id']; ?>">UPDATE</a>
-                <a class="f" onclick="return confirm('Yakin ?')" href="delete.php?id=<?php echo $row['id']; ?>">DELETE</a>
-            </div> -->
 
                     <tr>
                         <td><?php echo $no++; ?></td>

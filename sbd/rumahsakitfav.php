@@ -36,11 +36,11 @@
         <div class="table">
             <table>
                 <tr>
-                    <td>
+                    <!-- <td> -->
                         <?php
                         $vaksin = mysqli_query($conn, "SELECT id_vaksin, nama_vaksin FROM vaksin"); 
                         ?>
-                        <p> Vaksin: </p>
+                        <p class="vaksin"> Vaksin: </p>
                         <form id="changevaksin" name="changevaksin" action="rumahsakitfav.php" method="POST">
                             <select id = "cbvaksin" name="cbvaksin" onchange="myFunction()">
                             <option>Pilih</option>
@@ -55,7 +55,7 @@
                             ?>
                             </select>
                         </form>
-                    </td>
+                    </!-->
                 </tr>
                 <tr>
                     <th>No</th>

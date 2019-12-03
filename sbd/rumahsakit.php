@@ -30,17 +30,16 @@
                 <a class="c" href="home.php">HOME</a>
                 <a class="d active" href="pilihrekomendasi.php">REKOMENDASI RS</a>
                 <a class="e" href="update.php">PROFILE</a>
-                <!-- <a class="f" href="update.php">REALISASI VAKSIN</a> -->
         </div>
         
         <div class="table">
             <table>
                 <tr>
-                    <td>
+                    <!-- <td> -->
                         <?php
                         $vaksin = mysqli_query($conn, "SELECT id_vaksin, nama_vaksin FROM vaksin"); 
                         ?>
-                        <p> Vaksin: </p>
+                        <p class="vaksin"> Vaksin: </p>
                         <form id="changevaksin" name="changevaksin" action="rumahsakit.php" method="POST">
                             <select id = "cbvaksin" name="cbvaksin" onchange="myFunction()">
                             <option>Pilih</option>
@@ -55,8 +54,8 @@
                             ?>
                             </select>
                         </form>
-                    </td>
-                    <td>
+                    <!-- </td> -->
+                    <!-- <td> -->
                             <!-- <p>Rumah Sakit</p>
                             <form id="changefav" name="changefav" action="rumahsakit.php" method="POST">
                                 <select id = "fav" name = "fav" onchange=fungsiFav()">
@@ -64,14 +63,13 @@
                                     <option value ="1">Paling Favorit</option>
                                 </select>
                             </form> -->
-                    </td>
+                    </!-->
                 </tr>
                 <tr>
                     <th>No</th>
                     <th>Rumah Sakit</th>
                     <th>Vaksin</th>
                     <th>Biaya</th>
-                    <!-- <th>Jarak</th> -->
                 </tr>
                 <?php
                     $no = 1; 

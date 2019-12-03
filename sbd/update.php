@@ -24,7 +24,6 @@
                 <a class="c" href="home.php">HOME</a>
                 <a class="d" href="pilihrekomendasi.php">REKOMENDASI RS</a>
                 <a class="e active" href="update.php">PROFILE</a>
-                <!-- <a class="f" href="editdata.php">REALISASI VAKSIN</a> -->
             </div>
 
                 <div class="update">
@@ -46,9 +45,11 @@
                             <b> <h1>Alamat<h1> </b>
                             <p><?php echo $row['alamat']; ?> </br> 
                             <b> <h1>Opsi<h1> </b>
-                            <a href="update-process.php?username=<?php echo $row['username']; ?>">UPDATE</a> </br>
-                            <a href="change-password.php?username=<?php echo $row['username']; ?>">CHANGE PASSWORD</a> </br>
-                            <a onclick="return confirm('Yakin ?')" href="delete.php?username=<?php echo $row['username']; ?>">DELETE</a>
+                            <a class="btn-opsi" href="update-process.php?username=<?php echo $row['username']; ?>">UPDATE</a>
+                            <p class="space"></p>
+                            <a class="btn-change" href="change-password.php?username=<?php echo $row['username']; ?>">CHANGE PASSWORD</a>
+                            <p class="space"></p>
+                            <a class="btn-opsi" onclick="return confirm('Yakin ?')" href="delete.php?username=<?php echo $row['username']; ?>">DELETE</a>
                     <?php }?>
 
             </div>

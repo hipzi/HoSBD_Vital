@@ -30,20 +30,12 @@
                 <a class="c" href="home.php">HOME</a>
                 <a class="d active" href="rumahsakit.php">REKOMENDASI RS</a>
                 <a class="e" href="update.php">PROFILE</a>
-                <!-- <a class="f" href="update.php">REALISASI VAKSIN</a> -->
         </div>
-        
-        <div class="table">
-            <table>
-                <tr>
-                    <a href="rumahsakit.php">Berdasarkan Biaya</a> </br>
-                </tr>
-                <tr>
-                    <a href="rumahsakitfav.php">Berdasarkan Frekuensi Kunjungan</a> </br>
-                </tr>
-                
-            </table>
-            </div>
+
+        <div class="pilih">
+                <h5>BERDASARKAN</h5>
+                <p><a href="rumahsakit.php" class="btn-pilih_a">Biaya</a></p>
+                <p><a href="rumahsakitfav.php" class="btn-pilih_b">Frekuensi Kunjungan</a></p>
         </div>
 
         <script type="text/javascript" src="jquery-3.4.1.min.js"></script>

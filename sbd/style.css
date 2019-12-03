@@ -48,47 +48,39 @@ a.active, .nav a:hover{
 }
 
 .a{
-    width: 100%;
-    height: 90px;
-    font-size: 28px;
-    line-height: 90px;
-}
-
-.b{
-    width: 92%;
-    height: 90px;
-    font-size: 28px;
-    line-height: 90px;
-}
-
-.c{
-    width: 83%;
-    height: 90px;
-    font-size: 28px;
-    line-height: 90px;
-}
-
-.d{
-    width: 75%;
-    height: 90px;
-    font-size: 28px;
-    line-height: 90px;
-}
-
-.e{
-    width: 85%;
-    height: 90px;
-    font-size: 28px;
-    line-height: 90px;
-}
-
-.f{
     width: 95%;
     height: 90px;
     font-size: 28px;
     line-height: 90px;
 }
 
+.b{
+    width: 80%;
+    height: 90px;
+    font-size: 28px;
+    line-height: 90px;
+}
+
+.c{
+    width: 70%;
+    height: 90px;
+    font-size: 28px;
+    line-height: 90px;
+}
+
+.d{
+    width: 80%;
+    height: 90px;
+    font-size: 28px;
+    line-height: 90px;
+}
+
+.e{
+    width: 95%;
+    height: 90px;
+    font-size: 28px;
+    line-height: 90px;
+}
 
 .log-form{
     width: 400px;
@@ -208,6 +200,22 @@ a.active, .nav a:hover{
     font-size: 14px;
 }
 
+.table select {
+    width: 30%;
+    border: none;
+    outline: none;
+    background: transparent;
+    border-bottom: 1px solid white;
+    height: 25px;
+    margin-left: 100px;
+    margin-bottom: 5px;
+    color: white;
+}
+
+.vaksin{
+    margin-top: 20px;
+    margin-left: 30px;
+}
 .editdata{
     width: 400px;
     height: 600px;
@@ -412,13 +420,17 @@ a.active, .nav a:hover{
     color: white;
     box-sizing: border-box;
     opacity: 0.8;
-    width: 1250px;
-    height: 1900px;
     top: 10%;
     left: 25%;
+    width: 1250px;
+    /* height: 1900px; */
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     line-height: 25px;
     font-size: 18px;
+}
+
+.table .user {
+    height: 1700px;
 }
 
 .table th,td {
@@ -427,6 +439,10 @@ a.active, .nav a:hover{
     width: 1000px;
     height: 50px;
     color: white;
+}
+
+.table a {
+    color: black;
 }
 
 .table .UD{
@@ -494,3 +510,92 @@ a.active, .nav a:hover{
     margin: 15px 30px 40px 30px;
 }
 
+.pilih{
+    width: 400px;
+    height: 220px;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    padding: 0;
+    transform: translate(-50%,-50%); 
+    opacity: 0.8;
+    background-color: rgb( 74, 112, 123);
+    color: white;
+    box-sizing: border-box;
+    padding: 10px 10px;
+    line-height: 32px;
+}
+
+.pilih h5{
+    font-size: 35px;
+    text-align: center;
+    line-height: 75px;
+    margin-bottom: 10px;
+    font-family: 'Caveat', cursive;
+}
+
+.pilih p {
+    margin-bottom: 30px;
+}
+
+.btn-pilih_a{
+    line-height: 15px;
+    height: 35px;
+    width: 100%;
+    text-align: center;
+    background: transparent;
+    border: 1px solid white;
+    color: white;
+    font-size: medium;
+    padding: 7px 125px 7px 125px;
+    font-family: 'Roboto Mono', monospace;
+    margin: 15px 50px 40px 45px;
+}
+
+.btn-pilih_b{
+    line-height: 15px;
+    height: 35px;
+    width: 100%;
+    text-align: center;
+    background: transparent;
+    border: 1px solid white;
+    color: white;
+    font-size: medium;
+    padding: 7px 60px 7px 60px;
+    font-family: 'Roboto Mono', monospace;
+    margin: 15px 50px 40px 45px;
+}
+
+.btn-opsi{
+    line-height: 15px;
+    height: 35px;
+    width: 80%;
+    background: transparent;
+    border: 1px solid white;
+    color: white;
+    padding: 7px 93px 7px 93px;
+    font-family: 'Roboto Mono', monospace;
+    margin: 15px 30px 40px 7px;
+}
+
+.btn-change{
+    line-height: 15px;
+    height: 35px;
+    width: 80%;
+    background: transparent;
+    border: 1px solid white;
+    color: white;
+    padding: 7px 50.9px 7px 50.9px;
+    font-family: 'Roboto Mono', monospace;
+    margin: 15px 0px 40px 7px;
+}
+
+.space {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    border-bottom: 0px solid white !important;
+    height: 5px !important;
+    margin-bottom: 5px !important;
+}
